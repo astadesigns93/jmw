@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <title>Webb's Portfolio</title>
+<!--links-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<!-- content -->
+<body background="image/gradient2.png">
+<div class="container-fluid">
+ <!-- circlenav-->
+<header>
+<br>
+	<br>
+ <h1 style="color:snow; font-size: 50px; text-align:center"> Social Links</h1>
+<br>
+</header>
+	</div>
+<div class= "container-lg">
+<div class="bars" id="nav-action">
+  <span class="bar"></span>
+</div>
+<nav id="nav">
+  <ul>
+    <li class="shape-circle circle-one"><a href="index1.html">Home</a></li>
+    <li class="shape-circle circle-two"><a href="about.html">about</a></li>
+    <li class="shape-circle circle-three"><a href="social.html">Social</a></li>
+    <li class="shape-circle circle-five"><a href="#">Komanda</a></li>
+    <li class="shape-circle circle-five"><a href="#">Elaqe</a></li>
+  </ul>
+</nav>
+	<style>* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-size: cover; 
+  min-width: 500px;
+  min-height: 200px;
+  color: rgba(200,211,255,1.00);
+  font-family: Gotham, 'Helvetica Neue', 'sans-serif'
+  background-color: #111A20 !important;
+  height:100vmax;
+}
+
+.bars {
+  /*   background-color:lightblue; */
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 101;
+  padding-top:9px;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+}
+
+span::before,
+span::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+}
+
+.bar::before {
+  transform: translateY(-9px);
+}
+
+.bar::after {
+  transform: translateY(9px);
+}
+
+.bars.active .bar {
+  background-color: transparent;
+}
+
+.bars.active span::before {
+  animation: top-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+  animation: bottom-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+
+/* Navbar Links CSS */
+
+#nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+#nav a:hover {
+  background: rgba(169,196,208,0.12);
+  font-size: 25px;
+  color:#708398;
+}
+
+ul {
+  list-style: none;
+}
+
+.visible {
+  z-index: 100 !important;
+  opacity: 1 !important;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  right: -10vw;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background: background-color: transparent;
+  box-shadow: 0 0px 0px rgba(187,188,216,0.50);
+}
+
+nav.visible li:first-child {
+  width: 200vw;
+  height: 200vw;
+  top: -100vw;
+  right: -100vw;
+  z-index: 5;
+  transition: all .4s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:nth-child(2) {
+  width: 160vw;
+  height: 160vw;
+  top: -80vw;
+  right: -80vw;
+  z-index: 6;
+  transition: all .5s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:nth-child(3){
+  width: 120vw;
+  height: 120vw;
+  top: -60vw;
+  right: -60vw;
+  z-index: 7;
+  transition: all .6s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+nav.visible li:nth-child(4){
+  width: 80vw;
+  height: 80vw;
+  top: -40vw;
+  right: -40vw;
+  z-index: 7;
+  transition: all .7s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+nav.visible li:last-child{
+  width: 40vw;
+  height: 40vw;
+  top: -20vw;
+  right: -20vw;
+  z-index: 8;
+  transition: all .8s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:first-child a {
+  line-height: 280vw !important;
+    text-indent: 14vw !important;
+
+}
+
+nav.visible li:nth-child(2) a {
+  line-height: 220vw !important;
+  text-indent:13vw !important;
+}
+
+nav.visible li:nth-child(3) a {
+  line-height: 165vw !important;
+    text-indent: 12vw !important;
+  
+}
+nav.visible li:nth-child(4) a {
+  line-height: 110vw !important;
+    text-indent:11vw !important;
+  
+}
+nav.visible li:last-child a {
+  line-height: 60vw !important;
+  text-indent:10vw !important;
+}
+
+@keyframes top-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
+
+@keyframes bottom-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+</style>
+<script>// Setting up the Variables
+var bars = document.getElementById("nav-action");
+var nav = document.getElementById("nav");
+
+
+//setting up the listener
+bars.addEventListener("click", barClicked, false);
+
+
+//setting up the clicked Effect
+function barClicked() {
+  bars.classList.toggle('active');
+  nav.classList.toggle('visible');
+}</script>
+
+<!--social-->
+<style>@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+$main-green: #79dd09 !default;
+$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+$main-yellow: #bdbb49 !default;
+$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+$main-red: #bd150b !default;
+$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+$main-blue: #0076bd !default;
+$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+/* This pen */
+body {
+	font-family: "Baloo 2", cursive;
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: inherit;
+}
+
+a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+  a {
+    color: inherit;
+  }
+	
+	h2,	.h2 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+		align-content: center; 
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+		padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #8586F2;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+		.postcard__text {
+      padding: 2rem 3.5rem;
+    }
+		
+		.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+	
+  .postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+  }
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+  }
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+}
+.green .postcard__title:hover {
+	color: $main-green;
+}
+.green .postcard__bar {
+	background-color: $main-green;
+}
+.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+}
+.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+}
+.blue .postcard__title:hover {
+	color: $main-blue;
+}
+.blue .postcard__bar {
+	background-color: $main-blue;
+}
+.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+}
+.red .postcard__title:hover {
+	color: $main-red;
+}
+.red .postcard__bar {
+	background-color: $main-red;
+}
+.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+}
+.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+}
+.yellow .postcard__title:hover {
+	color: $main-yellow;
+}
+.yellow .postcard__bar {
+	background-color: $main-yellow;
+}
+.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+}
+</style>
+<section class="dark">
+	<div class="container py-4">
+		<h2 class="h2" id="pageHeaderTitle"><strong>FInd me on:</strong></h2>
+<article class="postcard dark blue">
+		  <a class="postcard__img_link" href="image/fb.png">
+			  <img src="image/fb.png" alt="fb" width="297" height="300" class="postcard__img" />
+		  </a>
+		  <div class="postcard__text">
+				<h1 class="postcard__title blue"><a href="https://www.facebook.com/AstaDesigns?mibextid=LQQJ4d">Facebook</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+				  </time>
+			  </div>
+				<div class="postcard__bar"></div>
+<ul class="postcard__tagbox">
+		    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+					</li>
+				</ul>
+		  </div>
+		</article>
+		
+		<article class="postcard dark red">
+			<a class="postcard__img_link" href="image/instagram.png">
+				<img src="image/instagram.png" alt="insta" width="307" height="305" class="postcard__img" />	
+			</a>
+			<div class="postcard__text; text-start">
+				<h1 class="postcard__title red"><a href="https://www.instagram.com/jmwebbdesigns/?igsh=bzlyYnF6YWN3N3Js&amp%3Butm_source=qr">Instagram</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+<ul class="postcard__tagbox">
+		    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play red">
+						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark green">
+			<a class="postcard__img_link" href="image/Be.png">
+				<img src="image/Be.png" alt="Be" width="305" height="307" class="postcard__img" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title green"><a href="https://www.behance.net/janessawebb">Behance</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>May 2024'
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+<ul class="postcard__tagbox">
+		    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play green">
+						
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark yellow">
+			<a class="postcard__img_link" href="image/linkedin.png">
+				<img src="image/linkedin.png" alt="linkedin" width="300" height="297" class="postcard__img" />
+
+			</a>
+			<div class="postcard__text; text-start">
+				<h1 class="postcard__title yellow"><a href="https://www.linkedin.com/in/janessa-webb-1415b6240/">Linkedin</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+<ul class="postcard__tagbox">
+		    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play yellow"> </li>
+				</ul>
+			</div>
+		</article>
+	<article class="postcard dark yellow">
+			<a class="postcard__img_link" href="image/paintbrish.png">
+				<img src="image/paintbrish.png" alt="brush" width="297" height="300" class="postcard__img" />
+
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title yellow"><a href="https://awebb0019.myportfolio.com/">Portfolio</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>May 2024&nbsp;
+                  </time>
+			  </div>
+				<div class="postcard__bar"></div>
+<ul class="postcard__tagbox">
+		    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play yellow"> </li>
+			  </ul>
+		</div>
+	  </article>
+	</div>
+</section>
+
+
+<div class="footer">
+  <p style="text-align: center">Footer</p>
+<style>.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(27,37,67,1.00);
+   color: snow;
+   text-align: center;
+}</style>
+</div>
+	</div>
+	</body>
+</html>

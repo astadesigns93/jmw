@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <title>Webb's Portfolio</title>
+<!--links-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<!-- content -->
+<body background="image/gradient2.png">
+<div class="container-fluid">
+ <!-- circlenav-->
+<header>
+<br>
+	<br>
+ <h1 style="color:snow; font-size: 50px; text-align:center"> About</h1>
+<br>
+</header>
+	</div>
+<div class= "container-lg">
+<div class="bars" id="nav-action">
+  <span class="bar"></span>
+</div>
+<nav id="nav">
+  <ul>
+    <li class="shape-circle circle-one"><a href="index1.html">Home</a></li>
+    <li class="shape-circle circle-two"><a href="about.html">about</a></li>
+    <li class="shape-circle circle-three"><a href="#">Contact</a></li>
+    <li class="shape-circle circle-five"><a href="#">Komanda</a></li>
+    <li class="shape-circle circle-five"><a href="#">Elaqe</a></li>
+  </ul>
+</nav>
+	<style>* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-size: cover; 
+  min-width: 500px;
+  min-height: 200px;
+  color: rgba(200,211,255,1.00);
+  font-family: Gotham, 'Helvetica Neue', 'sans-serif'
+  background-color: #111A20 !important;
+  height:100vmax;
+}
+
+.bars {
+  /*   background-color:lightblue; */
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 101;
+  padding-top:9px;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+}
+
+span::before,
+span::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+}
+
+.bar::before {
+  transform: translateY(-9px);
+}
+
+.bar::after {
+  transform: translateY(9px);
+}
+
+.bars.active .bar {
+  background-color: transparent;
+}
+
+.bars.active span::before {
+  animation: top-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+  animation: bottom-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+
+/* Navbar Links CSS */
+
+#nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+#nav a:hover {
+  background: rgba(169,196,208,0.12);
+  font-size: 25px;
+  color:#708398;
+}
+
+ul {
+  list-style: none;
+}
+
+.visible {
+  z-index: 100 !important;
+  opacity: 1 !important;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  right: -10vw;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background: background-color: transparent;
+  box-shadow: 0 0px 0px rgba(187,188,216,0.50);
+}
+
+nav.visible li:first-child {
+  width: 200vw;
+  height: 200vw;
+  top: -100vw;
+  right: -100vw;
+  z-index: 5;
+  transition: all .4s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:nth-child(2) {
+  width: 160vw;
+  height: 160vw;
+  top: -80vw;
+  right: -80vw;
+  z-index: 6;
+  transition: all .5s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:nth-child(3){
+  width: 120vw;
+  height: 120vw;
+  top: -60vw;
+  right: -60vw;
+  z-index: 7;
+  transition: all .6s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+nav.visible li:nth-child(4){
+  width: 80vw;
+  height: 80vw;
+  top: -40vw;
+  right: -40vw;
+  z-index: 7;
+  transition: all .7s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+nav.visible li:last-child{
+  width: 40vw;
+  height: 40vw;
+  top: -20vw;
+  right: -20vw;
+  z-index: 8;
+  transition: all .8s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:first-child a {
+  line-height: 280vw !important;
+    text-indent: 14vw !important;
+
+}
+
+nav.visible li:nth-child(2) a {
+  line-height: 220vw !important;
+  text-indent:13vw !important;
+}
+
+nav.visible li:nth-child(3) a {
+  line-height: 165vw !important;
+    text-indent: 12vw !important;
+  
+}
+nav.visible li:nth-child(4) a {
+  line-height: 110vw !important;
+    text-indent:11vw !important;
+  
+}
+nav.visible li:last-child a {
+  line-height: 60vw !important;
+  text-indent:10vw !important;
+}
+
+@keyframes top-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
+
+@keyframes bottom-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+</style>
+<script>// Setting up the Variables
+var bars = document.getElementById("nav-action");
+var nav = document.getElementById("nav");
+
+
+//setting up the listener
+bars.addEventListener("click", barClicked, false);
+
+
+//setting up the clicked Effect
+function barClicked() {
+  bars.classList.toggle('active');
+  nav.classList.toggle('visible');
+}</script>
+
+
+<main> 
+<style>/**Typeo CSS Start**/
+@import url("image/designtype.png")
+
+* {
+ box-sizing: boder-box; 
+}
+
+body {
+ margin: 0px;
+ background-color: #fff;
+}
+
+/**Typeo CSS End**/
+
+/*Image Effect Start*/
+.img-hover {
+ overflow: hidden;
+ position: absolute;
+ display: inline-block;
+}
+
+.img-hover img {
+ -webkit-transition: opacity 0.35s, transform 0.35s;
+ -moz-transition: opacity 0.35s, transform 0.35s;
+ -ms-transition: opacity 0.35s, transform 0.35s;
+ -o-transition: opacity 0.35s, transform 0.35s;
+ transition: opacity 0.35s, transform 0.35s;
+ -webkit-transform: scale(1.02);
+ -moz-transform: scale(1.02);
+ -ms-transform: scale(1.02);
+ -o-transform: scale(1.02);
+ transform: scale(1.02);
+}
+
+.img-hover:hover img {
+ -webkit-transform: scale(1);
+ -moz-transform: scale(1);
+ -ms-transform: scale(1);
+ -o-transform: scale(1);
+ transform: scale(1);
+ opacity: 1;
+}
+
+.img-hover:hover:before {
+ -webkit-animation: effect_shine 1s;
+ -moz-animation: effect_shine 1s;
+ -ms-animation: effect_shine 1s;
+ -o-animation: effect_shine 1s;
+ animation: effect_shine 1s;
+}
+
+.img-hover:before {
+ position: absolute;
+ top: 0;
+ right: auto;
+ bottom: auto;
+ left: -108%;
+ content: "";
+ z-index: 1;
+ display: block;
+ width: 50%;
+ height: 100%;
+ background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+ background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+ -webkit-transform: skewX(-25deg);
+ -moz-transform: skewX(-25deg);
+ -ms-transform: skewX(-25deg);
+ -o-transform: skewX(-25deg);
+ transform: skewX(-25deg);
+}
+
+@-webkit-keyframes effect_shine {
+ 100% {
+  left: 150%;
+ }
+
+}
+
+@keyframes effect_shine {
+ 100% {
+  left: 150%;
+ }
+
+}
+
+/*Image Effect End*/
+.image-cont-scn, .image-cont-scn * {
+ --page-width: 1330px;
+ --base-fm: 'Rubik', sans-serif;
+ --title-size: 40px;
+ --base-size: 16px;
+ --white-clr: #ffffff;
+ --theme-clr: #ff6200;
+}
+
+.page-width {
+ max-width: var(--page-width);
+ padding: 0 15px;
+ margin: auto;
+ width: 100%;
+}
+
+.image-cont-scn {
+ width: 100%;
+ padding: 50px 0px;
+ color: var(--base-size);
+ font-family: var(--base-fm);
+}
+
+.image-cont-item {
+ display: flex;
+ flex-flow: row wrap;
+ width: 100%;
+ align-items: center;
+ padding: 30px 0px;
+}
+
+.image-cont-item .cont-prt {
+ width: 50%;
+ padding: 20px 50px;
+ padding-left: 0px;
+ line-height: 1.4;
+}
+
+.image-cont-item .image-prt {
+ width: 50%;
+ position: relative;
+ overflow: hidden;
+}
+
+.image-cont-item img {
+ max-width: 100%;
+}
+
+.image-cont-item .cont-prt h2 {
+ font-size: var(--title-size);
+ margin-top: 0px;
+ text-transform: uppercase;
+ font-weight: 500;
+}
+
+
+.image-cont-item:nth-child(2n+1) .cont-prt {
+ padding-left: 40px;
+ padding-right: 0px;
+ order: 2;
+}
+
+.image-cont-item:nth-child(2n+1) .image-prt {
+ order: 1;
+}
+
+@media(max-width:1200px) {
+ .image-cont-scn {
+  padding: 30px 0px;
+ }
+
+ .image-cont-item {
+  align-items: flex-start;
+ }
+
+ .image-cont-item .cont-prt {
+  width: 50%;
+  padding-right: 20px;
+  padding-top: 0px;
+ }
+
+ .image-cont-item .cont-prt h2 {
+  font-size: calc(var(--title-size) - 10px);
+ }
+
+ .image-cont-item:nth-child(2n+1) .cont-prt {
+  padding-left: 20px;
+ }
+
+}
+
+@media(max-width:767px) {
+ .image-cont-item:nth-child(2n+1) .cont-prt {
+  padding-left: 0;
+  order: inherit;
+ }
+
+ .image-cont-item .cont-prt {
+  width: 100%;
+  padding-right: 0;
+ }
+
+ .image-cont-item .image-prt {
+  width: 100%;
+ }
+
+}</style>
+<section class="image-cont-scn">
+ <div class="page-width">
+  <div class="image-cont-list">
+   <div class="image-cont-item column-gap-0">
+    <div class="cont-prt">
+		<style>.fancy {
+  --b: 6px;   /* control the border thickness */
+  --w: 80px;  /* control the width of the line*/
+  --g: 15px;  /* control the gap */
+  --c: #0B486B;
+ 
+  width:cover; 
+  padding: 0 1em;
+  line-height: 1.6em;
+  border: 1px solid;
+  color: #fff;
+  background: 
+    conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+    conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+  background-size: 51% 100%;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  border-image: 
+     linear-gradient(
+       #0000      calc(50% - var(--b)/2),
+       var(--c) 0 calc(50% + var(--b)/2),
+       #0000    0) 
+    1/0 var(--w)/calc(var(--w) + var(--g));
+  margin-inline: auto;
+}
+h2 {
+  font-size: 1.8rem;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16px; 
+}</style>
+      <h2 class="fancy" style="text-align: left; 30vw;--c: #93AADE;--b:0px;--g: 50px">Artist statment</h2>
+      <p style="text-align: left; font-size-adjust: auto"><strong>Janessa M Webb is a detail-oriented artist based in Litchfield County, CT, whose medium of choice is graphic design. With a background in business administration and a focus in marketing, she brings a unique blend of creativity and strategic thinking to her work.</strong></p>
+     <p style="text-align: left; font-size-adjust: auto"><strong> Experienced in utilizing design principles and software tools, Janessa is able to deliver high-quality design output that perfectly captures the essence of her clients' visions.</strong></p>
+       <p style="text-align: left; font-size-adjust: auto"><strong> As an artist, she is passionate about leveraging her creativity to create visually compelling and impactful designs that leave a lasting impression.</strong></p>
+       <p style="text-align: left; font-size-adjust: auto"><strong>Each piece she creates is a unique reflection of her dedication to her craft and her unwavering commitment to delivering excellence.
+</strong></p>
+    </div>
+    <div class="image-prt img-hover">
+      <a href="image/designtype.png"><img src="image/designtype.png" alt="Lifestyle Solutions" width="600" height="335"></a> </div>
+   </div>
+<div class="container-fluid">
+ <!-- circlenav-->
+<header>
+<br>
+	<br>
+ <h1 style="color:snow; font-size: 50px; text-align:center">Reviews</h1>
+<br>
+</header>
+	</div>
+   <div class="image-cont-item">
+<div class="cont-prt">
+
+    <h2 class="fancy" style="text-align: left; 30vw;--c: #93AADE;--b:0px;--g: 50px">kimberly Rinko; LCSW </h2>
+      <h4 style="text-align: left; font-size-adjust: auto"><strong><em>JC</em> <em>Counseling</em> <em>Services</em>, Middlebury , CT</strong></h4>
+      <p style="text-align: left; font-size-adjust: auto"><strong>"I am pleased to write this letter of recommendation for Janessa Webb. She is hardworking and dedicated to her passion of art and design. </strong></p>
+      <p style="text-align: left; font-size-adjust: auto"><strong> During the time that I have known Ms. Webb, she has enrolled in various training programs and obtained a master’s degree to improve the quality of her work. </strong></p>
+      <p style="text-align: left; font-size-adjust: auto"><strong>She is versed in various computer graphics programs. Her love for designing is evident in the time and details she puts into her work. Ms. Webb has displayed the ability to create captivating and insightful designs.
+</strong></p>
+</div>
+   <div class="image-prt img-hover">
+      <a href="image/typebook.png"><img src="image/typebook.png" alt="book" width="650" height="360"></a> </div>
+   </div>
+   </div>
+  </div>
+</section>
+	
+<section class="image-cont-scn">
+ <div class="page-width">
+  <div class="image-cont-list">
+   <div class="image-cont-item">
+    <div class="cont-prt">
+   <h2 class="fancy" style="--w: 30vw;--c: #93AADE;--b:0px;--g: 50px">Ronald Schack; PHD</h2>
+      <h4 style="text-align:left; font-size-adjust: auto"><strong> The Charter Oak Group, LLC, Manchester, CT</strong></h4>
+      <p style="text-align: left; font-size-adjust: auto"><strong>"I engaged Janessa to develop a website called <a href="https://www.interactivedecisionanalytics.com/">Datagrotto.org</a>. Janessa worked with me to develop the structure, look and feel of the site, and created a site that includes the features that we needed, including videos, downloadable content, and a blog page. </strong></p>
+      <p style="text-align: left; font-size-adjust: auto"><strong>She also created a great logo for the site. She delivered her work on time and on budget, and was happy to refine her work as our understanding of our needs evolved. I would highly recommend her for any website, logo, or graphics needs.</strong></p>
+    </div>
+    <div class="image-prt img-hover">
+      <a href="image/gra.png"><img src="image/gra.png" alt="Lifestyle Solutions" width="600" height="335"></a> </div>
+   </div>
+</div>
+ </div>
+</section>
+</main>
+<div class="footer">
+  <p style="text-align: center">Footer</p>
+<style>.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(27,37,67,1.00);
+   color: snow;
+   text-align: center;
+}</style>
+</div>
+</div>
+	</body>
+</html>

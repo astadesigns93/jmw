@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <title>Webb's Portfolio</title>
+<!--links-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<!-- content -->
+<body background="image/gradient2.png">
+<div class="container-fluid">
+ <!-- circlenav-->
+<header>
+<br>
+	<br>
+ <h1 style="color:snow; font-size: 50px; text-align:center"> Artwork&nbsp;</h1>
+<br>
+<h2 style="color:snow; font-size: 30px; text-align:center">Here is some of the art that I do</h2>
+<br>
+</header>
+	</div>
+<div class= "container-lg">
+<div class="bars" id="nav-action">
+  <span class="bar"></span>
+</div>
+<nav id="nav">
+  <ul>
+    <li class="shape-circle circle-one"><a href="index1.html">Home</a></li>
+    <li class="shape-circle circle-two"><a href="about.html">about</a></li>
+    <li class="shape-circle circle-three"><a href="social.html">Social</a></li>
+    <li class="shape-circle circle-five"><a href="artwork.html">Artwork</a></li>
+    <li class="shape-circle circle-five"><a href="#">Elaqe</a></li>
+  </ul>
+</nav>
+	<style>* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-size: cover; 
+  min-width: 500px;
+  min-height: 200px;
+  color: rgba(200,211,255,1.00);
+  font-family: Gotham, 'Helvetica Neue', 'sans-serif'
+  background-color: #111A20 !important;
+  height:100vmax;
+}
+
+.bars {
+  /*   background-color:lightblue; */
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 101;
+  padding-top:9px;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+}
+
+span::before,
+span::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+}
+
+.bar::before {
+  transform: translateY(-9px);
+}
+
+.bar::after {
+  transform: translateY(9px);
+}
+
+.bars.active .bar {
+  background-color: transparent;
+}
+
+.bars.active span::before {
+  animation: top-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+  animation: bottom-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+
+/* Navbar Links CSS */
+
+#nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+#nav a:hover {
+  background: rgba(169,196,208,0.12);
+  font-size: 25px;
+  color:#708398;
+}
+
+ul {
+  list-style: none;
+}
+
+.visible {
+  z-index: 100 !important;
+  opacity: 1 !important;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  right: -10vw;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background: background-color: transparent;
+  box-shadow: 0 0px 0px rgba(187,188,216,0.50);
+}
+
+nav.visible li:first-child {
+  width: 200vw;
+  height: 200vw;
+  top: -100vw;
+  right: -100vw;
+  z-index: 5;
+  transition: all .4s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:nth-child(2) {
+  width: 160vw;
+  height: 160vw;
+  top: -80vw;
+  right: -80vw;
+  z-index: 6;
+  transition: all .5s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:nth-child(3){
+  width: 120vw;
+  height: 120vw;
+  top: -60vw;
+  right: -60vw;
+  z-index: 7;
+  transition: all .6s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+nav.visible li:nth-child(4){
+  width: 80vw;
+  height: 80vw;
+  top: -40vw;
+  right: -40vw;
+  z-index: 7;
+  transition: all .7s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+nav.visible li:last-child{
+  width: 40vw;
+  height: 40vw;
+  top: -20vw;
+  right: -20vw;
+  z-index: 8;
+  transition: all .8s ease-in-out;
+  box-shadow: 0 0px 50px #333333;
+}
+
+nav.visible li:first-child a {
+  line-height: 280vw !important;
+    text-indent: 14vw !important;
+
+}
+
+nav.visible li:nth-child(2) a {
+  line-height: 220vw !important;
+  text-indent:13vw !important;
+}
+
+nav.visible li:nth-child(3) a {
+  line-height: 165vw !important;
+    text-indent: 12vw !important;
+  
+}
+nav.visible li:nth-child(4) a {
+  line-height: 110vw !important;
+    text-indent:11vw !important;
+  
+}
+nav.visible li:last-child a {
+  line-height: 60vw !important;
+  text-indent:10vw !important;
+}
+
+@keyframes top-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
+
+@keyframes bottom-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+</style>
+<script>// Setting up the Variables
+var bars = document.getElementById("nav-action");
+var nav = document.getElementById("nav");
+
+
+//setting up the listener
+bars.addEventListener("click", barClicked, false);
+
+
+//setting up the clicked Effect
+function barClicked() {
+  bars.classList.toggle('active');
+  nav.classList.toggle('visible');
+}</script>
+
+<!--Gallery-->
+<style>/**Typeo CSS Start**/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	background-color: #fff;
+}
+
+img {
+	max-width: 100%;
+}
+
+/**Typeo CSS End**/
+.gallery2-scn, .gallery2-scn * {
+	--page-width: 1330px;
+	--base-fm: 'Rubik', sans-serif;
+	--title-size: 40px;
+	--base-size: 18px;
+	--white-clr: #ffffff;
+	--bg-clr: #F9F6F2;
+}
+
+.page-width {
+	max-width: var(--page-width);
+	padding: 0 15px;
+	margin: auto;
+	width: 100%;
+}
+
+.gallery2-scn {
+	
+	width: 100%;
+	padding: 40px 0px;
+	font-family: var(--base-fm);
+	font-size: var(--base-size);
+	color: var(--white-clr);
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	text-align: center;
+}
+
+.gallery2-scn p {
+	max-width: 860px;
+	margin: 15px auto;
+}
+
+.gallery2-scn h2 {
+	font-size: var(--title-size);
+	color: var(--white-clr);
+	margin: 0px;
+}
+
+.gallery-list {
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100% + 30px);
+	margin-left: -15px;
+	margin-top: 20px;
+}
+
+.gallery-list .gallery-item {
+	width: calc(33.33% - 30px);
+	margin: 15px;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+}
+
+.gallery-list .gallery-item:before {
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin: auto;
+	background-image: url(https://coderwrap.com/wp-content/uploads/2023/04/search-icon.png);
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	background-size: 100% 100%;
+	transition: 0.5s all;
+	z-index: 1;
+	opacity: 0;
+}
+
+.gallery-list .gallery-item img {
+	display: block;
+	transition: 0.5s all;
+	width: 100%;
+	pointer-events: none;
+}
+
+.gallery-cont {
+	position: absolute;
+	bottom: -100%;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 15px;
+	transition: 0.5s all;
+	font-size: calc(var(--title-size) - 12px);
+}
+
+.gallery-list .gallery-item:hover img {
+	transform: scale(1.1);
+}
+
+.gallery-list .gallery-item:hover:before {
+	opacity: 1;
+}
+
+.gallery-list .gallery-item:hover .gallery-cont {
+	bottom: 0px;
+}
+
+/**Gallery Popup**/
+.gModel-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999
+}
+
+.gallerymodel {
+	pointer-events: none;
+	opacity: 0;
+	transition: 0.5s all;
+}
+
+.gallerymodelshow {
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.gallerymodel .gallery-list {
+	margin: 0px;
+	width: 100%;
+	overflow: hidden;
+	max-width: 1000px;
+	width: 100%;
+	margin: auto;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 9999;
+}
+
+.gallerymodel .gallery-list .gallery-item {
+	width: 100%;
+	margin: 0px;
+	display: none;
+}
+
+.gallerymodel .gallery-list .gallery-item.active {
+	display: block;
+}
+
+.gallerymodel .gallery-list .gallery-item:before {
+	content: normal;
+}
+
+.gModel-close {
+	color: #fff;
+	z-index: 9999;
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	font-weight: 300;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+@media(max-width:1100px) {
+	.gallerymodel .gallery-list {
+		width: calc(100% - 30px);
+	}
+
+	.gallery-cont {
+		font-size: calc(var(--title-size) - 25px);
+		bottom: 0;
+		padding: 10px;
+	}
+
+	.gallerymodel .gallery-cont {
+		font-size: calc(var(--title-size) - 15px);
+		padding: 15px 5px;
+	}
+
+}
+
+@media(max-width:767px) {
+	.gallery2-scn {
+		padding: 20px 0px;
+		font-size: calc(var(--base-size) - 4px);
+	}
+
+	.gallery2-scn h2 {
+		font-size: calc(var(--title-size) - 10px);
+	}
+
+	.gallery-list {
+		width: calc(100% + 10px);
+		margin-left: -5px;
+		margin-top: 10px;
+	}
+
+	.gallery-list .gallery-item {
+		width: calc(50% - 10px);
+		margin: 5px;
+		border-radius: 4px;
+	}
+
+	.gallerymodel .gallery-list {
+		width: calc(100% - 10px);
+	}
+
+	.slideArrows {
+		width: calc(100% - 40px);
+	}
+
+	.gModel-close {
+		font-size: 24px;
+	}
+
+}</style>
+<script>//Append Model Popup Code
+const div =	document.createElement("div");
+const gmodelClass = div.setAttribute("class", "gallerymodel");
+document.querySelector('.gallery2-scn').appendChild(div);
+document.querySelector('.gallerymodel').innerHTML ="🗙";
+//.appendChild(div);
+
+document.querySelector(".gallery-list .gallery-item:first-child").classList.add('active');
+const galleryList = document.querySelector(".gallery-list");
+const clonedGallery = galleryList.cloneNode(true);
+document.querySelector(".gallerymodel").appendChild(clonedGallery);
+let galleryItems = document.querySelectorAll('.gallery-list .gallery-item');
+galleryItems.forEach(function(item) {
+ item.addEventListener('click', function(e) {
+   galleryItems.forEach(function(item) {
+     item.classList.remove('active');
+   });
+   e.target.classList.add('active'); 
+ });
+});
+
+/**Model Click Start**/
+
+let items = document.querySelectorAll('.gallery-list .gallery-item[data-gallery]');
+items.forEach(function(item) {
+  item.addEventListener('click', function(e) {
+    let gallery = e.target.getAttribute('data-gallery');
+    let listItems = document.querySelectorAll('.gallery-list .gallery-item[data-gallery="' + gallery + '"]');
+    listItems.forEach(function(listItem) {
+      listItem.classList.add('active');
+    });
+    document.querySelector('.gallerymodel').classList.add('gallerymodelshow');
+    
+  });
+});
+/**Model Click Start**/
+
+//Model Close
+ document.querySelector('.gModel-close').addEventListener('click', function(e) {
+  document.querySelector('.gallerymodel').classList.remove('gallerymodelshow'); 
+ });</script>
+<section class="gallery2-scn">
+	<div class="page-width">
+		<h2>Posters</h2>
+		
+		<div class="gallery-list">
+			<div class="gallery-item" data-gallery="gallery-1">
+				<img src="image/designtype.png" alt="Gallery">
+				<div class="gallery-cont">Gallery 1</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-2">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img2.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 2</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-3">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img3.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 3</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-4">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img4.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 4</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-5">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img5.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 5</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-6">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img6.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 6</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="gallery2-scn">
+	<div class="page-width">
+		<h2>Photography</h2>
+		
+		<div class="gallery-list">
+			<div class="gallery-item" data-gallery="gallery-1">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img1.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 1</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-2">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img2.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 2</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-3">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img3.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 3</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-4">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img4.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 4</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-5">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img5.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 5</div>
+			</div>
+			<div class="gallery-item" data-gallery="gallery-6">
+				<img src="https://cdn.shopify.com/s/files/1/0710/8303/2860/files/gallery-img6.jpg" alt="Gallery">
+				<div class="gallery-cont">Gallery 6</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footer">
+  <p style="text-align: center">Footer</p>
+<style>.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(27,37,67,1.00);
+   color: snow;
+   text-align: center;
+}</style>
+</div>
+	</div>
+	</body>
+</html>
